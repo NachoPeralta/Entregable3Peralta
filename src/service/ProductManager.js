@@ -44,9 +44,8 @@ class ProductManager {
         await this.readFile();
         const product = this.products.find(item => item.id == id);
 
-        if (!product) {
-            console.log("Producto no encontrado");
-            return;
+        if (!product) {            
+            return {error:"Producto no encontrado"};
         }
         return product;
     }

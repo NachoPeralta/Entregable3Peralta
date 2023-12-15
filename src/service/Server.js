@@ -38,11 +38,9 @@ class Server {
             
             if (product) {
                 // Se mandará a llamar desde el navegador a la url http://localhost:8080/products/2, eso debe devolver sólo el producto con id=2.
-                res.send(product);
-            } else {
                 // Se mandará a llamar desde el navegador a la url http://localhost:8080/products/34123123, 
                 // al no existir el id del producto, debe devolver un objeto con un error indicando que el producto no existe.
-                res.send("Producto no encontrado");
+                res.send(product);
             }
         })
     }
