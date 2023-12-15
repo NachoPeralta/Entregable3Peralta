@@ -185,9 +185,6 @@ function run() {
         await productManager.addProduct(p10);
 
         await getProductData();
-
-        // Termino la ejecución para que no quede en loop al levantar el server
-        resolve();
     });
 }
 
