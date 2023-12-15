@@ -33,8 +33,8 @@ class Server {
             }
         })
         
-        this.app.get("/products/:id", async (req, res) => {
-            const product = await this.productManager.getProductById(req.params.id);
+        this.app.get("/products/:pid", async (req, res) => {
+            const product = await this.productManager.getProductById(req.params.pid);
             
             if (product) {
                 // Se mandará a llamar desde el navegador a la url http://localhost:8080/products/2, eso debe devolver sólo el producto con id=2.
